@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style..css">
+
+</head>
+
+<body>
+
+    <!-- data for edit -->
+
+    <section class="databox" id="getdata">
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem?</p>
+
+    </section>
+
+    <button class="edit" id="editbtn">Edit</button>
+
+    <button class="style" id="stylebtn">Style</button>
+
+    <!-- area for edit data from getdata -->
+
+    <section class="editbox" id="editdata">
+
+        <div class="editeddata">
+
+            <textarea name="area" id="editarea" cols="90" rows="10"></textarea>
+
+            <button class="add" id="addbtn">Add</button>
+
+            <button class="save" id="savebtn">Save</button>
+
+        </div>
+
+    </section>
+
+    <!-- area for style data -->
+
+    <section class="stylebox" id="stylearea">
+
+        <!-- font size box -->
+
+        <div class="fontsize"> Font Size <br>
+            <input type="radio" name="font" value="10">10px
+            <input type="radio" name="font" value="12">12px
+            <input type="radio" name="font" value="14">14px
+            <input type="radio" name="font" value="16">16px
+            <input type="radio" name="font" value="20">20px
+        </div>
+
+        <!-- font family box -->
+
+        <div class="fontfamyly"> Font family <br>
+
+            <select class="getfont" name="fonts" id="getfontfamily">
+                <option value="choose-option">Choose option</option>
+                <option value="cursive">cursive</option>
+                <option value="sans-serif">sans-serif</option>
+                <option value="monospace">monospace</option>
+                <option value="fantasy">fantasy</option>
+            </select>
+
+        </div>
+
+        <!-- colors for text and background -->
+
+        <div class="getcolors">Colors: <br>
+
+            <div class="colorblock" id="colors">
+
+                <button class="box" data-color="blue" data-background="blue" style="background-color: blue"></button>
+                <button class="box" data-color="red" data-background="red" style="background-color: red"></button>
+                <button class="box" data-color="greenyellow" data-background="greenyellow"
+                    style="background-color: greenyellow"></button>
+                <button class="box" data-color="green" data-background="green" style="background-color: green"></button>
+                <button class="box" data-color="white" data-background="white" style="background-color: white"></button>
+                <button class="box" data-color="orange" data-background="orange"
+                    style="background-color: orange"></button>
+                <button class="box" data-color="darkblue" data-background="darkblue"
+                    style="background-color: darkblue"></button>
+                <button class="box" data-color="purple" data-background="purple"
+                    style="background-color: purple"></button>
+                <button class="box" data-color="gold" data-background="gold" style="background-color: gold"></button>
+
+            </div>
+
+            <button class="fontcolor" id="setfontcolor">Color of text</button>
+
+            <button class="backcolor" id="setbackcolor">Background color</button>
+
+        </div>
+
+        <!-- font style box -->
+
+        <div class="get-fontstyle">Style: <br>
+
+            <label><input type="checkbox" id="boldtext" value="bold"> Bold text</label>
+            <label><input type="checkbox" id="cursivetext" value="italic"> Cursive text</label>
+
+        </div>
+
+    </section>
+
+    <!-- add table or list box -->
+
+    <section class="addelement" id="addelementarea">
+
+        <!-- choose table or list -->
+
+        <div class="add__title">Choose what you want.</div>
+
+        <div class="add__radio">
+            <input type="radio" name="addelem" value="addtable"> Table
+            <input type="radio" name="addelem" value="addlist"> List
+        </div>
+
+        <!-- add table box -->
+
+        <div class="add__table">
+
+            <div class="add__table-title">Count TR: <input class="add__table-input" type="text" name="rows"
+                    id="tablerow" placeholder="Count TR:"></div> <br>
+
+            <div class="add__table-title">Count TD: <input class="add__table-input" type="text" name="rows"
+                    id="tablerow" placeholder="Count TD:"></div>
+
+            <div class="add__style-to-table">Add style to your table: <br><br>
+                <div class="add__table-title">Width of TD: <input class="add__table-input" type="text" name="rows"
+                        id="tdWidth" placeholder="Width of TD:"></div> <br>
+
+                <div class="add__table-title">Heigth of TD: <input class="add__table-input" type="text" name="rows"
+                        id="tdHeigth" placeholder="Heigth of TD:"></div> <br>
+
+                <span>Width of border:</span><input type="text" class="td__border" id="borderWidth"
+                    placeholder="Width:">
+
+                <span>Type of border:</span><select name="tableborder" id="borderType">
+
+                    <option value="solid">solid</option>
+                    <option value="dashed">dashed</option>
+                    <option value="dotted">dotted</option>
+
+                </select>
+
+                <span>Color of border:</span><select name="tableborder" id="borderColor">
+
+                    <option value="black">black</option>
+                    <option value="red">red</option>
+                    <option value="blue">blue</option>
+                    <option value="green">green</option>
+
+                </select> <br><br>
+
+                <button class="add__table-btn" id="addtablebtn">Create table</button>
+
+            </div>
+
+        </div>
+
+        <!-- add list box -->
+
+        <div class="add__list">
+
+            <div class="add__list-title">Count Li: <input class="add__list-item" type="text" name="li" id="listItem"
+                    placeholder="Count Li:"></div> <br>
+
+            <div class="add__list-title">Type of marks:
+
+                <select class="typeofmarks" name="marks" id="listType">
+
+                    <option value="circle">circle</option>
+                    <option value="armenian">armenian</option>
+                    <option value="square">square</option>
+                    <option value="decimal">decimal</option>
+
+
+                </select>
+
+            </div> <br>
+
+            <button class="add__list-btn" id="addlistbtn">Create list</button>
+        </div>
+
+    </section>
+
+    <script src="./main.js"></script>
+
+</body>
+
+</html>

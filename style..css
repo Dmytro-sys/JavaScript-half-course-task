@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+.databox {
+    background: grey;
+    width: 50%;
+    border: 2px solid black;
+    margin: 20px;
+    padding: 10px;
+    min-height: 200px;
+    
+}
+
+.edit,
+.style,
+.add,
+.save,
+.add__table-btn,
+.add__list-btn {
+    padding: 5px 10px;
+    border: 2px solid rgb(138, 125, 125);
+    border-radius: 5px;
+    cursor: pointer;
+  
+}
+
+.edit {
+    background: rgb(97, 97, 1);
+    margin-left: 20%;
+}
+
+.style {
+    background: rgb(42, 19, 168);
+}
+
+.editbox,
+.stylebox,
+.addelement {
+    background: grey;
+    width: 50%;
+    border: 2px solid black;
+    margin: 20px;
+    min-height: 200px;
+}
+
+.stylebox {
+    background: none;
+}
+
+textarea {
+    width: 100%;
+}
+
+.add {
+    margin-left: 12px;
+    background: rgb(204, 9, 19);
+}
+
+.save {
+    background: rgb(2, 134, 30);
+}
+
+.editeddata {
+    display: none;
+}
+
+.stylebox {
+    padding: 10px;
+}
+
+.getfont {
+    width: 150px;
+}
+
+.fontcolor,
+.backcolor {
+    background: rgb(97, 96, 96);
+    padding: 5px 10px;
+    border: 1px solid whitesmoke;
+    cursor: pointer;
+}
+
+.fontfamyly,
+.getcolors,
+.get-fontstyle {
+    margin-top: 10px;
+}
+
+.stylebox {
+    display: none;
+    position: relative;
+}
+
+.visible {
+    display: block;
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    display: block;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.colorblock {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 150px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    visibility: hidden;
+}
+
+.addelement {
+    display: none;
+}
+
+.add__title {
+    font-size: 25px;
+    font-family: sans-serif;
+    padding: 10px 20px;
+}
+
+.add__radio {
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+.add__table {
+    padding-left: 20px;
+    display: none;
+}
+
+.add__table-title {
+    font-size: 14px;
+    font-weight: normal;
+    font-family: sans-serif;
+}
+
+.add__table-input {
+    width: 75%;
+    padding-left: 5px;
+}
+
+.add__style-to-table {
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.add__style-to-table span {
+    font-size: 16px;
+    font-weight: normal;
+
+}
+
+.td__border {
+    width: 80px;
+}
+
+.add__table-btn,
+.add__list-btn
+ {
+    background: green;
+    color: aliceblue;
+    margin-bottom: 15px;
+}
+
+.add__list {
+    padding: 10px 20px;
+    display: none;
+}
+
+.add__list-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add__list-title select,
+.add__list-item 
+ {
+    width: 85%; 
+    padding-left: 5px;
+}
