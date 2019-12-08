@@ -149,6 +149,15 @@
      addElementArea.style.display = 'block';
  }
 
+ function showBackEditArea() {
+     getDataForEdit.style.display = 'block';
+     editArea.style.display = 'block';
+     moveToEditBtn.style.display = 'inline';
+     styleBtn.style.display = 'inline';
+     addElementArea.style.display = 'none';
+     return;
+ }
+
  // show add table area and add list area
 
  document.querySelector('.add__radio').addEventListener('click', showElements);
@@ -175,7 +184,7 @@
 
  let addListBtn = document.querySelector('#addlistbtn');
 
- //  get a value of list style 
+ //  get a value of list style from select
 
  let getStyle = document.querySelector('#listType');
 
@@ -217,9 +226,93 @@
      let addNewContent = areaForEdit.value + newContent;
      areaForEdit.value = addNewContent;
 
-     getDataForEdit.style.display = 'block';
-     editArea.style.display = 'block';
-     moveToEditBtn.style.display = 'inline';
-     styleBtn.style.display = 'inline';
-     addElementArea.style.display = 'none';
+     countOfLi.value = '';
+     showBackEditArea();
+ }
+
+ //  add table to edit data area
+
+ let numberOfRows = document.querySelector("#tablerow");
+
+ let numberOfColumns = document.querySelector("#tablecols");
+
+ let getTdWidth = document.querySelector('#tdWidth');
+
+ let getTdHeight = document.querySelector('#tdHeight');
+
+ let getTdBorderWidth = document.querySelector('#borderWidth');
+
+ let createTableBtn = document.querySelector('#addtablebtn');
+
+ // get border type value from select
+ let getTdBorderType = document.querySelector('#borderType');
+
+ let borderType = null;
+
+ getTdBorderType.addEventListener('change', setBorderType);
+
+ function setBorderType(e) {
+
+     let $el = e.target;
+
+     borderType = $el.options[$el.selectedIndex].value;
+ }
+
+ //  get border color from select
+
+ let getTdBorderColor = document.querySelector('#borderColor');
+
+ let borderColor = null;
+
+ getTdBorderColor.addEventListener('change', setBorderColor);
+
+ function setBorderColor(e) {
+
+     let $el = e.target;
+
+     borderColor = $el.options[$el.selectedIndex].value;
+ }
+
+ //  create table on click to button
+ createTableBtn.addEventListener('click', createTable);
+
+ function createTable() {
+     let table = document.createElement('table');
+
+     let cols = numberOfColumns.value;
+
+     let rows = numberOfRows.value;
+
+     let widthOfTd = getTdWidth.value;
+
+     let heightOfTd = getTdHeight.value;
+
+     let tdBorderWidth = getTdBorderWidth.value;
+
+     for (let i = 0; i < rows; i++) {
+         let tr = document.createElement('tr');
+
+         for (j = 0; j < cols; j++) {
+             let td = document.createElement('td');
+             td.style.width = widthOfTd + 'px';
+             td.style.height = heightOfTd + 'px';
+             td.style.border = tdBorderWidth + 'px';
+             td.style.borderStyle = borderType;
+             td.style.borderColor = borderColor;
+             td.innerText = "Td";
+             tr.appendChild(td);
+         }
+         table.appendChild(tr);
+     }
+     areaForEdit.appendChild(table);
+     let newTable = areaForEdit.innerHTML;
+     let addNewTable = areaForEdit.value + newTable;
+     areaForEdit.value = addNewTable;
+
+     numberOfColumns.value = '';
+     numberOfRows.value = '';
+     getTdWidth.value = '';
+     getTdHeight.value = '';
+     getTdBorderWidth.value = '';
+     showBackEditArea();
  }
